@@ -1,0 +1,35 @@
+<html>
+<!-- FROM: http://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/ -->
+<script type="text/javascript">
+
+function log(text) {
+  document.write(text + '<br/>');
+}
+
+function User(username, password) {
+  this.username = username;
+  this.password = password;
+}
+
+User.prototype = {
+  constructor:User,
+  login:function() {
+    if (this.username == 'ninjav' && this.password == '12345') {
+      log('Logged in OK');
+    } else {
+      log('Loggin failed.');
+    }
+  }
+}
+
+var person = new User('ninjav', '12345');
+
+person.login();
+person.login();
+
+</script>
+<body>
+  <h1>Javascript</h1>
+</body>
+</html>
+
